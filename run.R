@@ -7,7 +7,7 @@ y <- x + rnorm(15)
 fit <- lm(y ~ x)
 saveRDS(fit, "model.rds")
 
-app <- Fire$new(host = '0.0.0.0', port = as.integer(Sys.getenv('PORT')))
+app <- Fire$new(host = '0.0.0.0', port = 3000)
 app$set_logger(logger_console())
 
 # When the app starts, we'll load the model we saved. Instead of
